@@ -1,9 +1,9 @@
 import React, {useEffect, useState } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Forecast from './components/Forecast';
-import Week from './components/Week';
-import Footer from './components/Footer';
+import Navbar from '../NavBar/Navbar';
+import Week from '../Week/Week';
+import Footer from '../Footer/Footer';
+import DayForecast from '../DayForecast/DayForecast';
 
 function App() {
 
@@ -53,7 +53,7 @@ function App() {
       {loading ? (
             <div>Loading ...</div>
           ) : (
-            <Forecast sol ={sols[selectedSol]}/>
+            <DayForecast high={sols[selectedSol].maxTemp} low={sols[selectedSol].minTemp} windSpeed={sols[selectedSol].windSpeed} degrees={sols[selectedSol].compassDeg} date={sols[selectedSol].date} sol={sols[selectedSol].sol} />
           )}
       <Footer />
     </div>

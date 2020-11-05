@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../components/DayForecast.module.scss';
+import classes from './DayForecast.module.scss';
 import styled from 'styled-components';
 
 const DayForecast = (props) => {
@@ -9,8 +9,7 @@ const DayForecast = (props) => {
     `
 
     return (
-        <div className={ classes.weatherContainer }>
-            <div className={ classes.wrapper }>
+            <div className={ classes.weatherContainer }>
                 <div className={ classes.today }>
                     <h1>Sol { props.sol }</h1>
                     <p>{ props.date }</p>
@@ -30,7 +29,6 @@ const DayForecast = (props) => {
                     </div>
                 </div>​
             </div>
-        </div>
     )
 }
 

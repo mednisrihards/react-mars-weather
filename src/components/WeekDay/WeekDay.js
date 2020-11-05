@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../components/WeekDay.module.scss';
+import classes from './WeekDay.module.scss';
 
 function WeekDay({setSelectedSol, index, high, low, sol, date}) {
 
