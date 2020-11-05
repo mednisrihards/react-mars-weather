@@ -1,0 +1,27 @@
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 8vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.logo {
+  font-size: 30px;
+  font-family: avenir;
+}
+
+@media only screen and (max-width: 630px) {
+  .logo {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=Navbar.module.css.map */

@@ -1,0 +1,33 @@
+.container {
+    min-height: 100px;
+    margin: 20px 0;
+    font-family: avenir;
+    font-size: 100%;
+}
+
+.today > p {
+    color: gray;
+}
+
+.high::before {
+    content: "High: ";
+}
+
+.low::before {
+    content: "Low: ";
+}
+
+.high::after,
+.low::after {
+    content: " C\00b0";
+}
+
+button {
+    background-color: gray;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    padding: 3px 5px;
+    cursor: pointer;
+    color: white;
+}

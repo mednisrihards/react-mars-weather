@@ -1,0 +1,19 @@
+.container {
+    font-family: avenir;
+    font-weight: lighter;
+    background-color: white;
+    min-height: 23vh;
+}
+
+.heading {
+    font-weight: lighter;
+    text-transform: uppercase;
+    color:  rgb(83, 7, 7);
+    padding: 20px 0 0 75px;
+}
+
+@media only screen and (max-width: 630px) {
+    .heading {
+        padding: 20px 0 0 20px;
+    }
+}

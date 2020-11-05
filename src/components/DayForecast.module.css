@@ -1,0 +1,147 @@
+.weatherContainer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: avenir;
+  min-width: 200px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.today,
+.temp,
+.wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 20px;
+}
+
+.temp {
+  border-right: 2px solid #530707;
+  border-left: 2px solid #530707;
+}
+
+.today h1 {
+  font-size: 3em;
+}
+
+.today p {
+  opacity: 0.6;
+  font-size: 1.3em;
+}
+
+.temp p {
+  opacity: 0.6;
+  font-size: 1em;
+}
+
+.temp .high::before {
+  content: "High: ";
+}
+
+.temp .low::before {
+  content: "Low: ";
+}
+
+.temp .high::after,
+.temp .low::after {
+  content: "\00b0  C";
+}
+
+.wind p {
+  opacity: 0.6;
+  font-size: 1em;
+}
+
+.wind .speed::after {
+  content: " kmph";
+}
+
+.compass {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.compass .arrow {
+  --size: 10px;
+  background-color: white;
+  height: calc(var(--size) * 3);
+  width: var(--size);
+  position: relative;
+  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  -webkit-transform: translateY(-50%) rotate(var(--degrees));
+          transform: translateY(-50%) rotate(var(--degrees));
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.windContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 630px) {
+  .weatherContainer {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .weatherContainer {
+    width: 90%;
+  }
+  .compass {
+    margin: 0;
+  }
+  .wrapper {
+    display: block;
+    padding: 0px 20px;
+  }
+  .today,
+  .temp {
+    border-bottom: 2px solid #530707;
+    border-right: none;
+    border-left: none;
+  }
+  .today,
+  .temp {
+    padding: 20px 0;
+  }
+}
+/*# sourceMappingURL=DayForecast.module.css.map */

@@ -1,0 +1,23 @@
+$navBar-color: rgba(black, 0.5);
+$text-color: white;
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 8vh;
+    background-color: $navBar-color;
+    color: $text-color;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: avenir;
+}
+
+@media only screen and (max-width: 630px) {
+    .logo {
+        font-size: 15px;
+    }
+}

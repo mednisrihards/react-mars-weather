@@ -1,0 +1,132 @@
+.weatherContainer {
+    background-color: rgba(black, 0.7);
+    color: white;
+    font-family: avenir;
+    min-width: 200px;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+.today,
+.temp,
+.wind {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.temp {
+    border-right: 2px solid rgb(83, 7, 7);
+    border-left: 2px solid rgb(83, 7, 7);
+}
+
+.today {
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        opacity: 0.6;
+        font-size: 1.3em;
+    }
+}
+
+.temp {
+    p {
+        opacity: 0.6;
+        font-size: 1em;
+    }
+
+    .high::before {
+        content: "High: ";
+    }
+    
+    .low::before {
+        content: "Low: ";
+    }
+    
+    .high::after,
+    .low::after {
+        content: "\00b0  C";
+    }
+}
+
+.wind {
+    p {
+        opacity: 0.6;
+        font-size: 1em;
+    }
+
+    .speed::after {
+        content: " kmph";
+    }
+}
+
+.compass {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(black, 0.4);
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    .arrow {
+        --size: 10px;
+        background-color:white;
+        height: calc(var(--size) * 3);
+        width: var(--size);
+        position: relative;
+        clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+        transform: translateY(-50%) rotate(var(--degrees));
+        transform-origin: bottom center;
+        transition: 500ms ease;
+    }
+}
+
+.windContainer {
+    display: flex;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 630px) {
+    .weatherContainer {
+        font-size: 75%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .weatherContainer {
+        width: 90%;
+    }
+
+    .compass {
+        margin: 0;
+    }
+
+    .wrapper {
+        display: block;
+        padding: 0px 20px;
+    }
+
+    .today,
+    .temp {
+        border-bottom: 2px solid rgb(83, 7, 7);
+        border-right: none;
+        border-left: none;
+    }
+
+    .today,
+    .temp{
+        padding: 20px 0;
+    }
+}
